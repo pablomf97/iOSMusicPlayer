@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MusicPlayerWatch" customModuleProvider="target">
+                    <items>
+                        <label width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" text="Let it play" textAlignment="left" numberOfLines="2" minimumScaleFactor="0.20000000000000001" id="dx9-0r-Opc">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label width="1" height="0.20000000000000001" alignment="left" verticalAlignment="bottom" text="Lilcobaine" textAlignment="left" minimumScaleFactor="0.20000000000000001" id="aqC-Be-4xA">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <group width="1" height="0.5" alignment="left" id="tYR-xK-mGF">
+                            <items>
+                                <group width="0.5" height="1" alignment="left" verticalAlignment="center" backgroundImage="default_music_image" radius="10" id="Zwb-Hj-TId">
+                                    <items>
+                                        <imageView width="1" height="1" alignment="left" verticalAlignment="bottom" image="default_music_image" contentMode="scaleAspectFill" id="LAV-Ed-sYi"/>
+                                    </items>
+                                </group>
+                                <group width="0.5" height="1" alignment="left" layout="vertical" id="5Au-P1-GhT">
+                                    <items>
+                                        <group width="1" height="0.5" alignment="left" id="BeW-6R-QiR">
+                                            <items>
+                                                <button width="0.5" height="0.80000000000000004" alignment="center" verticalAlignment="center" backgroundImage="backward.fill" catalog="system" id="4ZS-A6-Hpk">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="previousSong" destination="AgC-eL-Hgc" id="1M4-5q-M1D"/>
+                                                    </connections>
+                                                </button>
+                                                <button width="0.5" height="0.80000000000000004" alignment="center" verticalAlignment="center" backgroundImage="forward.fill" catalog="system" id="GTY-ib-tvG">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="nextSong" destination="AgC-eL-Hgc" id="4vC-HT-uIv"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
+                                        <group width="1" height="0.5" alignment="left" id="36M-zH-V3a">
+                                            <items>
+                                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" backgroundImage="play.circle" catalog="system" id="vom-yn-jys">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="play" destination="AgC-eL-Hgc" id="XJT-6F-imk"/>
+                                                    </connections>
+                                                </button>
+                                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" backgroundImage="pause.circle" catalog="system" id="bUi-65-3r1">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="pause" destination="AgC-eL-Hgc" id="Rdf-iI-rk6"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="songArtist" destination="aqC-Be-4xA" id="lpt-7t-aVC"/>
+                        <outlet property="songImage" destination="LAV-Ed-sYi" id="glG-2Y-M1e"/>
+                        <outlet property="songName" destination="dx9-0r-Opc" id="fFM-OX-D7O"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-60" y="-21"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backward.fill" catalog="system" width="128" height="77"/>
+        <image name="default_music_image" width="580" height="582"/>
+        <image name="forward.fill" catalog="system" width="128" height="77"/>
+        <image name="pause.circle" catalog="system" width="128" height="121"/>
+        <image name="play.circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
